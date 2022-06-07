@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 move.putExtra("xRegion", data.getRegion());
                 move.putExtra("xAddress", data.getAddress());
                 move.putExtra("xTelephone", data.getTelephone());
-
+//
                 startActivity(move);
             }
         });

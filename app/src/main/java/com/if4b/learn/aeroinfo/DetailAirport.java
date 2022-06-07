@@ -18,7 +18,7 @@ public class DetailAirport extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
+//
         initView();
 
         Intent approve = getIntent();

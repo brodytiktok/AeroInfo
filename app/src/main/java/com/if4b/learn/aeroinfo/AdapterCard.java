@@ -17,7 +17,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
     private ArrayList<ModelAirport> dataAirport;
 
     public AdapterCard(ArrayList<ModelAirport> dataAirport){this.dataAirport = dataAirport;}
-
+//
     public interface onItemClickCallBack{
         void onItemClicked(ModelAirport data);
     }

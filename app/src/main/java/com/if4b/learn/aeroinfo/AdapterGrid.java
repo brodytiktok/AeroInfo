@@ -36,7 +36,7 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.GridViewHolder
 
         return new GridViewHolder(view);
     }
-
+//
     @Override
     public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
         ModelAirport airport = dataAirport.get(position);

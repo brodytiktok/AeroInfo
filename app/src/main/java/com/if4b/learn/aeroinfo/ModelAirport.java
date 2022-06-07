@@ -20,7 +20,7 @@ public class ModelAirport {
     public String getAirport() {
         return Airport;
     }
-
+//
     public void setAirport(String airport) {
         Airport = airport;
     }
