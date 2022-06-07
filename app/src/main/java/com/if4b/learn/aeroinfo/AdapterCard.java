@@ -14,8 +14,18 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder>{
-    public AdapterCard(ArrayList<ModelAirport> dataAirport){this.dataAirport = dataAirport;}
     private ArrayList<ModelAirport> dataAirport;
+
+    public AdapterCard(ArrayList<ModelAirport> dataAirport){this.dataAirport = dataAirport;}
+
+    public interface onItemClickCallBack{
+        void onItemClicked(ModelAirport data);
+    }
+    private AdapterGrid.OnItemCLickCallBack callBack;
+
+    public void setOnItemClickCallBack(AdapterGrid.OnItemCLickCallBack callBack){
+        this.callBack = callBack;
+    }
 
     @NonNull
     @Override
@@ -37,6 +47,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
             @Override
             public void onClick(View view) {
 
+                callBack.onItemClicked(dataAirport.get(holder.getAdapterPosition()));
             }
         });
     }

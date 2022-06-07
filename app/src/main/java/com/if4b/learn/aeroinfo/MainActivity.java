@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void tampilDataGrid(){
-        rvAirport.setLayoutManager(new GridLayoutManager(this, 2));
+                                                                // span count = colums
+        rvAirport.setLayoutManager(new GridLayoutManager(this, 1));
         AdapterGrid adapterGrid = new AdapterGrid(data);
 
         rvAirport.setAdapter(adapterGrid);
@@ -65,6 +67,23 @@ public class MainActivity extends AppCompatActivity {
         rvAirport.setLayoutManager(new LinearLayoutManager(this));
         AdapterCard adapterCard = new AdapterCard(data);
         rvAirport.setAdapter(adapterCard);
+
+        adapterCard.setOnItemClickCallBack(new AdapterGrid.OnItemCLickCallBack() {
+            @Override
+            public void onItemClicked(ModelAirport data) {
+                Intent move = new Intent(MainActivity.this, DetailAirport.class);
+                move.putExtra("xPhoto", data.getPhoto());
+                move.putExtra("xAirport", data.getAirport());
+                move.putExtra("xICAO", data.getICAO());
+                move.putExtra("xIATA", data.getIATA());
+                move.putExtra("xCountry", data.getCountry());
+                move.putExtra("xRegion", data.getRegion());
+                move.putExtra("xAddress", data.getAddress());
+                move.putExtra("xTelephone", data.getTelephone());
+
+                startActivity(move);
+            }
+        });
 
     }
 
