@@ -1,6 +1,8 @@
 package com.if4b.learn.aeroinfo;
 
 public class ModelAirport {
+    private String ICAO, IATA, Airport, Country ,Region, Address, Telephone , Photo, Geo;
+
     public String getICAO() {
         return ICAO;
     }
@@ -65,6 +67,13 @@ public class ModelAirport {
         Photo = photo;
     }
 
-    private String ICAO, IATA, Airport, Country ,Region, Address, Telephone ,Photo;
+    public String getGeo() {
+        return Geo;
+    }
+
+    public void setGeo(String geo) {
+        Geo = geo;
+    }
+
 
 }

@@ -117,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
-                        android:text="ICAO AIRPORT"
+                        android:text="ALAMAT AIRPORT"
                         />
                 </TableRow>
                 <TableRow
@@ -133,7 +133,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
-                        android:text="ICAO AIRPORT"
+                        android:text="TELEPON AIRPORT"
                         />
                 </TableRow>
             </TableLayout>
@@ -150,6 +150,7 @@
                 android:backgroundTint="#EDEDEDED"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:layout_gravity="center_horizontal"
                 />
             <Button
