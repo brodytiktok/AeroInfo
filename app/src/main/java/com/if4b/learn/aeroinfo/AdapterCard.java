@@ -33,6 +33,12 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
         Glide.with(holder.itemView.getContext())
                 .load(airport.getPhoto())
                 .into(holder.ivAirport);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     @Override
