@@ -16,16 +16,8 @@
             android:id="@+id/iv_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/aeroport"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AeroInfo"
-            android:layout_below="@id/iv_logo"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#8BC34A"
-            android:layout_gravity="center_horizontal"
-            />
+
     </LinearLayout>
 </RelativeLayout>
