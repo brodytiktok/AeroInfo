@@ -156,7 +156,7 @@
                 android:background="@drawable/ic_phone"/>
             <Button
                 android:id="@+id/map"
-                android:backgroundTint="#EDEDEDED"
+                android:backgroundTint="#89C345"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"

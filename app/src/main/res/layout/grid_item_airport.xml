@@ -4,12 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/tv_grid_airport"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_margin="6dp"
-        android:scaleType="centerCrop"
-         />
+        android:layout_height="wrap_content"
+        android:background="#BDBDBD"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/iv_grid_airport"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/tv_grid_airport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name Airport"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            style="@style/TextAppearance.AppCompat.Body2"
+            />
+    </LinearLayout>
+
+
 
 </LinearLayout>

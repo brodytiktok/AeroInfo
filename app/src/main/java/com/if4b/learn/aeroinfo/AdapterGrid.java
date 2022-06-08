@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,7 +41,7 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.GridViewHolder
     @Override
     public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
         ModelAirport airport = dataAirport.get(position);
-
+        holder.tvgridairport.setText(airport.getAirport());
         Glide
                 .with(holder.itemView.getContext())
                 .load(airport.getPhoto())
@@ -63,11 +64,13 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.GridViewHolder
     public class GridViewHolder extends RecyclerView.ViewHolder{
 
        ImageView ivgridairport;
+       TextView tvgridairport;
 
         public GridViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            ivgridairport= itemView.findViewById(R.id.tv_grid_airport);
+            ivgridairport= itemView.findViewById(R.id.iv_grid_airport);
+            tvgridairport= itemView.findViewById(R.id.tv_grid_airport);
         }
     }
 
