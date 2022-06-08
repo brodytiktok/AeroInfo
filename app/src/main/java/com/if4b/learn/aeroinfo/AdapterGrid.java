@@ -45,6 +45,13 @@ public class AdapterGrid extends RecyclerView.Adapter<AdapterGrid.GridViewHolder
                 .with(holder.itemView.getContext())
                 .load(airport.getPhoto())
                 .into(holder.ivgridairport);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callBack.onItemClicked(dataAirport.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override

@@ -58,7 +58,18 @@ public class MainActivity extends AppCompatActivity {
         adapterGrid.setOnItemClickCallBack(new AdapterGrid.OnItemCLickCallBack() {
             @Override
             public void onItemClicked(ModelAirport data) {
-                Toast.makeText(MainActivity.this, "Nama Airport" + data.getAirport(), Toast.LENGTH_SHORT).show();
+                Intent move = new Intent(MainActivity.this, DetailAirport.class);
+                move.putExtra("xPhoto", data.getPhoto());
+                move.putExtra("xAirport", data.getAirport());
+                move.putExtra("xICAO", data.getICAO());
+                move.putExtra("xIATA", data.getIATA());
+                move.putExtra("xCountry", data.getCountry());
+                move.putExtra("xRegion", data.getRegion());
+                move.putExtra("xAddress", data.getAddress());
+                move.putExtra("xTelephone", data.getTelephone());
+                move.putExtra("xGeo", data.getGeo());
+//
+                startActivity(move);
             }
         });
     }
