@@ -144,21 +144,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
             >
+
             <Button
                 android:id="@+id/call"
-                android:backgroundTint="#EDEDEDED"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                />
+                android:backgroundTint="#EDEDEDED"
+                android:background="@drawable/ic_phone"/>
             <Button
                 android:id="@+id/map"
                 android:backgroundTint="#EDEDEDED"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_location"
                 android:layout_gravity="center_horizontal"
                 />
         </LinearLayout>
