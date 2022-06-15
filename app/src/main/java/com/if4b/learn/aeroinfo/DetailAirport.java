@@ -64,8 +64,8 @@ public class DetailAirport extends AppCompatActivity {
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String lo = geo;
-                Uri location = Uri.parse("geo:"+lo+"?z=14");
+                String lo = address;
+                Uri location = Uri.parse("geo:0,0?q="+lo);
                 Intent locationIntent = new Intent(Intent.ACTION_VIEW, location);
                 startActivity(locationIntent);
                 //String
